@@ -46,7 +46,7 @@ const Products = () => {
             <div
               className={`animate-productList-appear ${classes.productList}`}
             >
-              <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 list-none grid-rows-auto pt-32 pl-5 pr-5">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 list-none grid-rows-auto pt-24 pl-5 pr-5">
                 {productItems}
               </ul>
             </div>
@@ -56,6 +56,7 @@ const Products = () => {
               thumbnail={selectedProduct.thumbnail}
               description={selectedProduct.description}
               price={selectedProduct.variants[0].prices[0].amount}
+              variants={selectedProduct.variants}
             />
           )}
         </div>

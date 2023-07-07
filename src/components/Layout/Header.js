@@ -5,7 +5,7 @@ import NavbarFilterButton from "./NavbarFilterButton";
 const Header = (props) => {
   return (
     <Fragment>
-      <header className="fixed top-0 left-0 w-full h-20 justify-center items-center bg-white text-purple-700 p-0 shadow-md z-10">
+      <header className="fixed top-0 left-0 w-full h-16 justify-center items-center bg-white text-purple-700 p-0 shadow-md z-10">
         <div className="absolute left-0 pt-7">
           <NavbarFilterButton
             categories={props.categories}
@@ -17,7 +17,7 @@ const Header = (props) => {
           <img
             src={logo}
             alt="medusa logo"
-            className="max-w-full max-h-full object-contain w-48 h-24 ml-4"
+            className="max-w-full max-h-full object-contain w-48 h-18 ml-4"
           />
         </div>
       </header>

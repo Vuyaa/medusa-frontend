@@ -1,4 +1,5 @@
-import Card from "../../UI/Card";
+import ProductDetailsForm from "../ProductDetailsForm/ProductDetailsForm";
+import classes from "./ProductDetails.module.css";
 
 const ProductDetails = (props) => {
   const convertToDecimal = (amount) => {
@@ -11,20 +12,18 @@ const ProductDetails = (props) => {
   }).format(convertToDecimal(props.price));
 
   return (
-    <div className="m-24">
-      <Card>
-        <div>
-          <h1>{props.name}</h1>
-          <p>{price}</p>
-          <img
-            src={props.thumbnail}
-            className="object-scale-down w-60 md:w-96 lg:w-96"
-            alt={props.name}
-          />
-
-          <p>{props.description}</p>
-        </div>
-      </Card>
+    <div>
+      <img
+        src={props.thumbnail}
+        alt={props.name}
+        className={classes.thumbnail}
+      />
+      <div className={classes.details}>
+        <h1>{props.name}</h1>
+        <p>{price}</p>
+        <p>{props.description}</p>
+        <ProductDetailsForm variants={props.variants} />
+      </div>
     </div>
   );
 };
