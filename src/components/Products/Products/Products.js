@@ -3,10 +3,16 @@ import ProductItem from "../ProductItem/ProductItem";
 import classes from "./Products.module.css";
 import ProductDetails from "../ProductDetails/ProductDetails";
 import { useState } from "react";
+import Header from "../../Layout/Header";
 
 const Products = () => {
+  // Default categories
+  const categories = ["pcat_shirts", "pcat_pants", "pcat_merch"];
+  const [category, setCategory] = useState(categories);
   //Making use of Medusas useProducts hook to get products array from the backend
-  const { products, isLoading } = useProducts();
+  const { products, isLoading } = useProducts({
+    category_id: category,
+  });
   const [visibleDetails, setVisibleDetails] = useState(true);
   const [selectedProductId, setSelectedProductId] = useState(null);
 
@@ -14,6 +20,16 @@ const Products = () => {
   const detailsHandler = (productId) => {
     setSelectedProductId(productId);
     setVisibleDetails(false);
+  };
+
+  const handleCategoryChange = (categoryId) => {
+    if (category.includes(categoryId)) {
+      // If the category is already selected, remove it
+      setCategory(category.filter((cat) => cat === categoryId));
+    } else {
+      // If the category is not selected, add it
+      setCategory([...category, categoryId]);
+    }
   };
 
   //Logic for accessing endpoint for the props in product details
@@ -24,6 +40,7 @@ const Products = () => {
     );
   }
 
+  //Get data from products we got from the useProducts hook
   const productItems = products?.map((product) => (
     <ProductItem
       name={product.title}
@@ -42,6 +59,13 @@ const Products = () => {
         <div>Loading...</div>
       ) : (
         <div>
+          <Header
+            categories={categories}
+            category={category}
+            handleCategoryChange={handleCategoryChange}
+            visibleDetails={visibleDetails}
+          />
+
           {visibleDetails ? (
             <div
               className={`animate-productList-appear ${classes.productList}`}

@@ -12,7 +12,10 @@ const ProductItem = (props) => {
 
   return (
     <Card>
-      <li className="flex justify-center flex-row-reverse m-4 pb-4 border-b-2 border-gray-300 flex-wrap items-end">
+      <li
+        onClick={props.onClick}
+        className="flex justify-center flex-row-reverse m-4 pb-4 border-b-2 border-gray-300 flex-wrap items-end cursor-pointer"
+      >
         <div>
           <img
             className="w-full max-w-lg h-auto mb-4 min-w-[200px]"
@@ -25,7 +28,6 @@ const ProductItem = (props) => {
             <h3 className="m-0 mb-1">{props.name}</h3>
           </div>
           <div className="mt-1 font-bold text-purple-800 text-lg">{price}</div>
-          <button onClick={props.onClick}>FFS</button>
         </footer>
       </li>
     </Card>
