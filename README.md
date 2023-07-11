@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Medusa frontend intership
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##Description
 
-## Available Scripts
+<ul> 
+<li>Client side of the medusa shop built with React.js.
 
-In the project directory, you can run:
+</li>
+<li>
+It took me five days at a moderate pace to complete the application and implement all the requirements.
+</li>
+<li>
+The most challenging requirement was definitely the implementation of the medusa.js library to use all the benefits of the prebuilt backend.
+</li>
+<li>
+The implementation I am most proud of is definitely the layout and responsiveness of the application, which in my opinion provides a good user experience according to all industry standards.
 
-### `npm start`
+</li>
+</ul>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+##Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<ul>
+<li>
+It contains main screen with the list of products recieved from the medusa-backend,
+and the product details which could be used to forward an item into the cart.
+</li>
+<li>
+ProductList is made to fit four different screen sizes, in such a way that the grid changes from 4-3-2-1 column
+</li>
+<li>
+The header in the main screen contains three buttons for filtering product categories.
+The buttons are also responsive by changing to a hamburger drop-down menu on a certain screen size
+</li>
+<li>
+The header in the main screen contains three buttons for filtering product categories, while in the ProductDetails view three buttons are replaced by one home button
+The buttons are also responsive by changing to a hamburger drop-down menu on a certain screen size
+</li>
+<li>
+Product details-view contains details about the product, as well as a form for selecting different variants and sizes of the product.
+</li>
+<li>
+I made a reusable Card component that can share styling if needed to a children component.
+</li>
+</ul>
