@@ -43,3 +43,6 @@ Product details-view contains details about the product, as well as a form for s
 I made a reusable Card component that can share styling if needed to a children component.
 </li>
 </ul>
+
+<h3>Conclusion</h3>
+This project was my first contact with medusa.js, and I am pleasantly surprised by the simplicity and efficiency of tools for building modern, easy to use e-commerce store, with a lot of prebuilt tools and functionalities one can use "out of the box ".
