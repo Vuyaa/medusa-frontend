@@ -1,6 +1,6 @@
 # Medusa frontend intership
 
-##Description
+<h2>Description</h2>
 
 <ul> 
 <li>Client side of the medusa shop built with React.js.
@@ -18,7 +18,7 @@ The implementation I am most proud of is definitely the layout and responsivenes
 </li>
 </ul>
 
-##Structure
+<h2>Structure</h2>
 
 <ul>
 <li>
